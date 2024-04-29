@@ -11,6 +11,9 @@ import com.microsoft.playwright.Page;
 public class HomePage {
 	
 	protected Page page;
+
+	private String postsLocator = "div[class^=uYoEFfcPW_usdw8Nxwwt]";
+	private String topMenuLocator = ".navbarList-item a";
 	
 	public HomePage(Page page) {
 		this.page = page;
@@ -18,7 +21,7 @@ public class HomePage {
 	
 	public void clickTopMenuItem(String menuItemName) {
 		
-		Locator elementsOnTop = page.locator(".navbarList-item a");
+		Locator elementsOnTop = page.locator(topMenuLocator);
 		elementsOnTop.first().waitFor();
 		for(int i=0;i< elementsOnTop.count();i++) {
 			if(elementsOnTop.nth(i).textContent().equals(menuItemName)) {
@@ -32,5 +35,10 @@ public class HomePage {
 	public Page getPage() {
 		return page;
 	}
+
+	public boolean isFirstPostDisplayed(){
+		return getPage().locator(postsLocator).first().isVisible();
+	}
+
 
 }
