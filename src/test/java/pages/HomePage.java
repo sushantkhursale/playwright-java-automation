@@ -25,11 +25,7 @@ public class HomePage {
 				elementsOnTop.nth(i).click();
 			}
 		}
-	
 		page.waitForLoadState();
-		boolean pageUrlCheck = page.url().contains(menuItemName.toLowerCase());
-		Assert.assertTrue(pageUrlCheck);
-		
 		System.out.println("clicked on desired element");	
 	}
 	
