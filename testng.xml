@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<!-- <test name="login">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="tests.LoginTest" />
+		</classes>
+	</test> -->
+    
+    <!--<test name="homePageTests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="tests.HomePageTests" />
+		</classes>
+	</test>  -->
+	
+	<listeners>
+		<listener class-name="utilities.TestListener"></listener>
+	</listeners>
+	
+	
+	
+	<test name="RewardsTests">
+		<parameter name="browser" value="chromium" />
+		<classes>
+			<class name="tests.RewardsTests" />
+		</classes>
+	</test>  
+	
+	<test name="LeaderboardTests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="tests.LeaderboardTests" />
+		</classes>
+	</test> 
+	
+</suite> 
