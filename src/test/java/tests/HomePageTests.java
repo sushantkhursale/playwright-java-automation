@@ -10,7 +10,9 @@ import pages.LoginPage;
 
 public class HomePageTests extends BaseTest {
 
-	
+
+	/* Test to verify all top menu options are working fine
+	 */
 	@Test
 	public void clickTopMenuTests() throws InterruptedException {
 		homePage.clickTopMenuItem("Leaderboard");
