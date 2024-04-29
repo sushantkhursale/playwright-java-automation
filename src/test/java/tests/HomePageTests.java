@@ -16,7 +16,6 @@ public class HomePageTests extends BaseTest {
 	@Test
 	public void clickTopMenuTests() throws InterruptedException {
 		homePage.clickTopMenuItem("Leaderboard");
-		Thread.sleep(10000);
 		
 	}
 
